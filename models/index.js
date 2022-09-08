@@ -9,18 +9,17 @@ User.hasMany(Responses, {
     onDelete: 'CASCADE'
 });
 
-Responses.belongTo(User, {
+Responses.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Responses.belongTo(Questions, {
+Responses.belongsTo(Questions, {
     foreignKey: 'question_id'
 });
 
-Questions.belongTo(Moods, {
+Questions.belongsToMany(Moods, {
     foreignKey: 'mood_id'
 });
-
 
 
 module.exports = { User, Moods, Questions, Responses };
