@@ -78,7 +78,6 @@ const questionData = [
         question: 'What is worse during a kiss: a sneeze or a cough?'
     },
 
-   
 ]
 
 const seedQuestions = () => Questions.bulkCreate(questionData);
