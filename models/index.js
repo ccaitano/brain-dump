@@ -5,20 +5,20 @@ const Responses = require('./Responses');
 
 // Create associations
 User.hasMany(Responses, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
 Responses.belongsTo(User, {
-    foreignKey: 'user_id'
+  foreignKey: 'user_id'
 });
 
 Responses.belongsTo(Questions, {
-    foreignKey: 'question_id'
+  foreignKey: 'question_id'
 });
 
 Questions.belongsToMany(Moods, {
-    foreignKey: 'mood_id'
+  foreignKey: 'mood_id'
 });
 
 

@@ -23,11 +23,11 @@ Responses.init(
       },
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'users',
-            key: 'id'
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'users',
+        key: 'id'
+      },
     },
   },
   {
