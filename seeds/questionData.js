@@ -77,6 +77,21 @@ const questionData = [
         mood_id: '6',
         question: 'What is worse during a kiss: a sneeze or a cough?'
     },
+    {
+        id: 16,
+        mood_id: '1',
+        question: 'How do you define happiness? Is it an achievable definition?'
+    },
+    {
+        id: 17,
+        mood_id: '1',
+        question: 'What excites you the most about your future and why? What scares you the most about your future and why?'
+    },
+    {
+        id: 18,
+        mood_id: '1',
+        question: 'What is the number 1 thing on your bucket list? When do you hope to accomplish it?'
+    },
 
 ]
 
