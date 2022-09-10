@@ -17,7 +17,7 @@ Responses.belongsTo(Questions, {
   foreignKey: 'question_id'
 });
 
-Questions.belongsToMany(Moods, {
+Questions.belongsTo(Moods, {
   foreignKey: 'mood_id'
 });
 
