@@ -26,6 +26,11 @@ const moodData = [
         mood_id: 5,
         mood_name: 'silly',
         count: 1
+    },
+    {
+        mood_id: 6,
+        mood_name: 'random',
+        count: 1
     }
 ]
 const seedMood = () => User.bulkCreate(moodData);
