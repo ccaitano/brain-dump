@@ -23,15 +23,17 @@
 
 const sequelize = require('../config/connection');
 const seedUser = require('./userData');
-const seedMood = require('./moodData');
-const seedQuestion = require('./questionData');
-const seedResponse = require('./responseData');
+const seedMoods = require('./moodData');
+const seedQuestions = require('./questionData');
+const seedResponses = require('./responseData');
+
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   await seedUser();
-  await seedMood();
-  await seedQuestion();
-  await seedResponse();
+  await seedMoods();
+  await seedQuestions();
+  await seedResponses();
   process.exit(0);
 };
+
 seedAll();
