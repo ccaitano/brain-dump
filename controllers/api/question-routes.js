@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Responses, Questions, Moods } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // router.get('/', async (req, res) => {
 //   try {
@@ -11,10 +12,10 @@ const { User, Responses, Questions, Moods } = require('../../models');
 // });
 
 
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const questionData = await Questions.findByPk(req.params.id, {
-      attributes: ['id', 'question', 'mood_id'], include: [{ model: User, attributes: ['username']}]
+      attributes: ['id', 'question', 'mood_id']
     });
 
     if (!questionData) {
@@ -22,9 +23,10 @@ router.get('/:id', withAuth, async (req, res) => {
       return;
     }
 
-    const question = (await dbQuestionData).get({ plain: true });
-    res.render('view_question', {question, logged_in: true});
+    const question = (questionData).get({ plain: true });
+    res.render('view_question', { question });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
