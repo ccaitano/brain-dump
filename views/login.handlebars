@@ -1,17 +1,28 @@
-<h2>Login</h2>
 
+<div class="card border-dark mb-3 mx-auto" style="max-width: 30rem;">
+<div class="card-header">Log In</div>
+<div class="card-body">
+  <h5 class="card-title">welcome! please enter your email and password to login</h5>
 <form class="form">
-  <div class="form-group">
+  <div class="form-group pb-2">
+    <p class="card-text"></p>
     <label for="email-login">email:</label>
     <input class="form-input" type="text" id="email-login" />
   </div>
-  <div class="form-group">
+  <div class="form-group pb-2">
     <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-login" />
+    <input class="form-input " type="password" id="password-login" />
   </div>
-  <div class="form-group">
-    <button class="login-form btn btn-primary" type="submit">login</button>
+  <div class="form-group ">
+    <button class="login-form btn btn-danger" type="submit">login</button>
+    </div>
+  </div>
   </div>
 </form>
-
+<div class="col-md-12 text-center pb-2">
+ new user?
+ </div> 
+<div class="col-md-12 text-center">
+  <button class="login-form btn btn-danger justify-content-center" type="submit">sign up</button>
+</div>
 <script src="/js/login.js"></script>
