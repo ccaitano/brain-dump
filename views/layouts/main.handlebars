@@ -4,16 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
+  <title>Mood Remedy</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
   {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
 </head>
 
 <body>
   <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    <!-- TODO: Add a comment describing the functionality of this helper -->
+    {{!-- <h1>
+      Mood Remedy
+    </h1> --}}
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../../public/assets/logo-black-lines.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Mood Remedy
+    </a>
+  </div>
+</nav>
+  
     {{#if logged_in}}
     <nav>
       <button class="btn" id="logout">logout</button>
@@ -27,7 +37,7 @@
       
   </footer>
 
-  <!-- TODO: Add a comment describing the functionality of this helper -->
+
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
