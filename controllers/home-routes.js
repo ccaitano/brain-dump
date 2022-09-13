@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 // Route "/login"
 
 // TODO: Add a comment describing the functionality of the withAuth middleware
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] }
@@ -16,6 +16,7 @@ router.get('/', withAuth, async (req, res) => {
     const users = userData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
+      layout: 'main',
       users,
       // TODO: Add a comment describing the functionality of this property
       logged_in: req.session.logged_in,

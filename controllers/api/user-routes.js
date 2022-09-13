@@ -54,10 +54,13 @@ router.post('/', (req, res) => {
     password: req.body.password
   })
   .then(dbUserData => {
-    req.session.save(() => {
-      req.session.username = dbUserData.username;
+    req.session.username = dbUserData.username;
       req.session.id = dbUserData.id;
       req.session.loggedIn = true;
+    req.session.save(() => {
+      // req.session.username = dbUserData.username;
+      // req.session.id = dbUserData.id;
+      // req.session.loggedIn = true;
 
       res.json(dbUserData);
     });
@@ -83,10 +86,10 @@ router.post('/login', (req, res) => {
     }
 
     req.session.id = dbUserData.id;
-    req.session.username = dbUserData.username;
-    req.session.loggedIn = true;
+    // req.session.email = dbUserData.email;
     
     req.session.save(() => {
+      req.session.loggedIn = true;
       res.json({ user: dbUserData, message: 'Welcome'});
     });
   });
