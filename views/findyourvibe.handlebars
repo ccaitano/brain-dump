@@ -1,0 +1,10 @@
+<h1>FIND YOUR VIBE</h1>
+<div>
+    <a href="/dashboard">Back to Main Dashboard</a>
+</div>
+<br>
+{{#each moods as |mood|}}
+    {{> moodButtons}}
+{{/each}}
+
+<script src="/js/mood.js"></script>
