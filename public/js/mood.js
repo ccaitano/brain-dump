@@ -62,7 +62,7 @@ const angryMoodHandler = async (event) => {
 };
 
 
-const instrospectiveMoodHandler = async (event) => {
+const introspectiveMoodHandler = async (event) => {
   event.preventDefault();
 
   const introspectiveCount = document.querySelector('.introspective').dataset.count;
@@ -138,8 +138,8 @@ document
   .addEventListener('click', angryMoodHandler);
 
 document
-  .querySelector('.instrospective')
-  .addEventListener('click', instrospectiveMoodHandler);
+  .querySelector('.introspective')
+  .addEventListener('click', introspectiveMoodHandler);
 
 document
   .querySelector('.silly')
