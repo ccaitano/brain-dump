@@ -40,6 +40,8 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+
+
 // GET Dashboard
 router.get('/dashboard', withAuth, (req, res) => {
   Moods.findAll({
