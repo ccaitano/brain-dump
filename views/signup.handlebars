@@ -1,16 +1,37 @@
-<div class="row">
-    <form>
-  <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label"> Enter your email</label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+
+<div class="card border-dark mb-3 mx-auto" style="max-width: 30rem;">
+<div class="card-header">Create an Account</div>
+<div class="card-body">
+  <h5 class="card-title">enter your user information below</h5>
+
+<form class="form">
+  
+<div class="form-group pb-2">
+    <p class="card-text"></p>
+    <label for="email">email:</label>
+    <input type="email" class="form-input" placeholder="enter your email" id="email" />
+  </div>
+  
+  <div class="form-group pb-2">
+    <label for="password">password:</label>
+    <input class="form-input " type="password" id="password" />
+  </div>
+
+  <div class="form-group pb-2">
+    <label for="password2">confirm password:</label>
+    <input class="form-input " type="password" id="password2" />
+  </div>
+  
+  <div class="form-group ">
+    <button class="login-form btn btn-danger" type="submit">create account</button>
     </div>
   </div>
-  <div class="form-group row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-    </div>
   </div>
 </form>
+<div class="col-md-12 text-center pb-2">
+ already have an account?
+ </div> 
+<div class="col-md-12 text-center">
+  <button class="login-form btn btn-danger justify-content-center" type="submit">log in</button>
 </div>
+<script src="/js/login.js"></script>
