@@ -50,7 +50,7 @@ router.get('/dashboard', withAuth, (req, res) => {
 // GET Find Your Vibe
 router.get('/findyourvibe', withAuth, (req, res) => {
   Moods.findAll({
-    attributes: ['id','mood_name','count']
+    attributes: ['id','mood_name','count', 'emoji_id']
   })
     .then(moodData => {
       const moods = moodData.map((mood) => mood.get({ plain: true }));
