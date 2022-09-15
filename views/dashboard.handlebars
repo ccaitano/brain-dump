@@ -23,12 +23,12 @@
         const data = await response.json();
         const allMoodCount = data.moods[0].count + data.moods[1].count + data.moods[2].count + data.moods[3].count + data.moods[4].count + data.moods[5].count;
         console.log(allMoodCount);
-        const happyCount = (data.moods[0].count)/allMoodCount;
-        const sadCount = (data.moods[1].count)/allMoodCount;
-        const angryCount = (data.moods[2].count)/allMoodCount;
-        const introspectiveCount = (data.moods[3].count)/allMoodCount;
-        const sillyCount = (data.moods[4].count)/allMoodCount;
-        const randomCount = (data.moods[5].count)/allMoodCount;
+        const happyCount = (data.moods[0].count)/allMoodCount * 100;
+        const sadCount = (data.moods[1].count)/allMoodCount * 100;
+        const angryCount = (data.moods[2].count)/allMoodCount * 100;
+        const introspectiveCount = (data.moods[3].count)/allMoodCount * 100;
+        const sillyCount = (data.moods[4].count)/allMoodCount * 100;
+        const randomCount = (data.moods[5].count)/allMoodCount * 100;
     const ctx = document.getElementById('myChart');
     const myChart = new Chart(ctx, {
         type: 'doughnut',
