@@ -3,6 +3,7 @@ const { Responses } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // CREATE responses
+//withAuth when login route is created
 router.post('/', withAuth, (req, res) => {
   if (req.session) {
     Responses.create({
