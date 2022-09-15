@@ -5,5 +5,62 @@
     <p>{{mood_name}}: {{count}}</p>
 {{/each}}
 
-{{!-- testing out emoji --}}
+<div class="row justify-content-center">
+    <div class="w-50">
+        <h3 class="text-center">My Mood Distribution</h3>
+    <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const getChart = async () => {
+        const response = await fetch('/api/moods', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        });
+        const data = await response.json();
+        const allMoodCount = data.moods[0].count + data.moods[1].count + data.moods[2].count + data.moods[3].count + data.moods[4].count + data.moods[5].count;
+        console.log(allMoodCount);
+        const happyCount = (data.moods[0].count)/allMoodCount;
+        const sadCount = (data.moods[1].count)/allMoodCount;
+        const angryCount = (data.moods[2].count)/allMoodCount;
+        const introspectiveCount = (data.moods[3].count)/allMoodCount;
+        const sillyCount = (data.moods[4].count)/allMoodCount;
+        const randomCount = (data.moods[5].count)/allMoodCount;
+    const ctx = document.getElementById('myChart');
+    const myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: [
+            'Happy',
+            'Sad',
+            'Angry',
+            'Introspective',
+            'Silly',
+            'Random'
+            ],
+            datasets: [{
+            label: 'My Moods',
+            data: [happyCount, sadCount, angryCount, introspectiveCount, sillyCount, randomCount],
+            backgroundColor: [
+                '#B8BEDD',
+                '#EFC3E6',
+                '#F0E6EF',
+                '#B8BEDD',
+                '#EFC3E6',
+                '#F0E6EF'
+            ],
+            hoverOffset: 4
+            }]
+        },
+    });
+
+    }
+
+    getChart();
+    
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
