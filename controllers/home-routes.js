@@ -64,9 +64,8 @@ router.get('/findyourvibe', withAuth, (req, res) => {
 
 // GET Question for the Day
 router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
-  const questionNum = Math.floor((Math.random()* 17) + 1);
   console.log(req.params.id);
-  console.log(questionNum);
+
   // Questions.findByPk(questionNum, {
   //   attributes: ['id','mood_id','question'],
   //   where: {
@@ -85,7 +84,10 @@ router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
   })
     .then(questionData => {
       const questions = questionData.map((question) => question.get({ plain: true }));
-      res.render('response', { questions, logged_in: true });
+      console.log(questions);
+      const questionNum = Math.floor((Math.random()* questions.length) + 1);
+      const question = questions[questionNum];
+      res.render('response', { question, logged_in: true });
     })
     .catch (err => {
       console.log(err);
