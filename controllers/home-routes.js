@@ -1,12 +1,8 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Moods, Questions } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Route "/"
-
-// Route "/login"
-
-// TODO: Add a comment describing the functionality of the withAuth middleware
+// GET Home Page
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -18,7 +14,6 @@ router.get('/', async (req, res) => {
     res.render('homepage', {
       layout: 'main',
       users,
-      // TODO: Add a comment describing the functionality of this property
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -26,8 +21,9 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET Login Form
 router.get('/login', (req, res) => {
-  // TODO: Add a comment describing the functionality of this if statement
+
   if (req.session.logged_in) {
     res.redirect('/');
     return;
@@ -36,13 +32,65 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// GET Dashboard
+router.get('/dashboard', withAuth, (req, res) => {
+  Moods.findAll({
+    attributes: ['id','mood_name','count']
+  })
+    .then(moodData => {
+      const moods = moodData.map((mood) => mood.get({ plain: true }));
+      res.render('dashboard', { moods, logged_in: true });
+    })
+    .catch (err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+// GET Find Your Vibe
+router.get('/findyourvibe', withAuth, (req, res) => {
+  Moods.findAll({
+    attributes: ['id','mood_name','count', 'emoji_id']
+  })
+    .then(moodData => {
+      const moods = moodData.map((mood) => mood.get({ plain: true }));
+      res.render('findyourvibe', { moods, logged_in: true });
+    })
+    .catch (err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+// GET Question for the Day
+router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
+  const questionNum = Math.floor((Math.random()* 17) + 1);
+  console.log(req.params.id);
+  console.log(questionNum);
+  // Questions.findByPk(questionNum, {
+  //   attributes: ['id','mood_id','question'],
+  //   where: {
+  //     mood_id: req.params.id
+  //   },
+  // })
+  //   .then(dbQuestionData => {
+  //     const questions = dbQuestionData.get({ plain: true });
+  //     res.render('response', { questions, logged_in: true });
+  //   })
+  Questions.findAll({
+    attributes: ['id','mood_id','question'],
+    where: {
+      mood_id: req.params.id
+    },
+  })
+    .then(questionData => {
+      const questions = questionData.map((question) => question.get({ plain: true }));
+      res.render('response', { questions, logged_in: true });
+    })
+    .catch (err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 module.exports = router;
-
-
-// Route "/dashboard"
-
-// Route "/dashboard/new"
-
-// Route "/dashboard/edit/:id"
-
-// Route "/post/:id"

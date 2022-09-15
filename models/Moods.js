@@ -17,6 +17,10 @@ Moods.init(
     count: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    emoji_id: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {
