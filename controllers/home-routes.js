@@ -95,7 +95,7 @@ router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
     .then(questionData => {
       const questions = questionData.map((question) => question.get({ plain: true }));
       console.log(questions);
-      const questionNum = Math.floor((Math.random()* questions.length) + 1);
+      const questionNum = Math.floor((Math.random()* questions.length));
       const question = questions[questionNum];
       res.render('response', { question, logged_in: true });
     })

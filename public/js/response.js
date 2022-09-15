@@ -10,7 +10,7 @@ const responseHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
   
-      if (response.ok) {
+      if (userResponse.ok) {
         console.log(userResponse);
         document.location.replace('/dashboard');
       } else {
@@ -42,6 +42,6 @@ const responseHandler = async (event) => {
   // };
   
   document
-    .querySelector('.response-form')
+    .querySelector('#response-form')
     .addEventListener('submit', responseHandler);
   
