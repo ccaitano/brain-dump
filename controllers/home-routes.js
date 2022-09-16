@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Moods, Questions } = require('../models');
+const { User, Moods, Questions, Responses } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET Home Page
@@ -104,5 +104,25 @@ router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
+// GET all responses
+router.get('/viewall', withAuth, (req, res) => {
+  Responses.findAll({
+    attributes: ['id', 'response', 'question_id', 'user_id'],
+    include: [{model: Questions, attributes: ['id', 'question', 'mood_id']}],
+  })
+
+    .then(dbResponseData => {
+      const responses = dbResponseData.map(response => response.get({plain: true}));
+      res.render('viewEntries', {responses});
+    })
+
+
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 
 module.exports = router;
