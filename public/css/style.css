@@ -16,7 +16,12 @@
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
   }
+
+
 #logout {
+  position: relative;
+  left: 47%;
+  top: 50%;
   display: inline-block;
   padding: 10px 20px;
   font-size: 20px;
@@ -24,18 +29,18 @@
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
-  background-color: #dc3545;
-  border: none;
+  color: black;
+  background-color: #B8BEDD;
+  border: black;
   border-radius: 15px;
   box-shadow: 0 9px #999;
   margin: 0.2em;
 }
 
-#logout:hover {background-color: #8C1C13}
+#logout:hover {background-color: #8d94b9}
 
 #logout:active {
-  background-color: #8C1C13;
+  background-color: #8d94b9;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -60,6 +65,10 @@
   color: black;
 }
 
+.wrapper {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 
 .card-title{
@@ -71,7 +80,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 30%;
   padding:2em
 }
 
@@ -87,6 +96,10 @@
   margin-right: auto;
   width: 40%;
 }
+/* .dashboard-images{
+  width: 150rem;
+  height: 100rem;
+} */
 
 .title{
   display: block;
@@ -101,8 +114,8 @@
 }
 
 .icon{
-  height: 20%;
-  width:20%;
+  height: 19%;
+  width: 19%;
 }
 
 #intro{
@@ -120,23 +133,28 @@
 .card-format {
   background-color: #EFC3E6 !important;
   padding: 5rem;
-  font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-family: 'Handlee';
   margin-bottom: 10px;
   
 
 }
 
+h1{
+  font-family: 'Handlee';
+}
+
 
 .card-header {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
+  font-family: 'Handlee';
+  font-size: 25px;
 }
 
 .title{
   font-size: xx-large;
+  position: relative; 
 }
 
 .heart-guy-credits{
-  width: 25%
+  width: 25%;
 }
