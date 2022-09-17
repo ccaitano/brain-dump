@@ -12,7 +12,7 @@
 <div class="card m-3 text-center">
         <form class="response-form m-3" id="response-form">
             <div class="form-group">
-                <label class="form-label font-weight-bold" for="question">{{question.question}}</label>
+                <label class="form-label font-weight-bold" id="question" for="question" data-question="{{question.id}}">{{question.question}}</label>
                 <input class="form-control form-input" id="response" name="response-body"/>
             </div>
             {{!-- <div class="row justify-content-center"> --}}

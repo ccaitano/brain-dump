@@ -114,6 +114,7 @@ router.get('/viewall', withAuth, (req, res) => {
 
     .then(dbResponseData => {
       const responses = dbResponseData.map(response => response.get({plain: true}));
+      console.log(responses);
       res.render('viewEntries', {responses});
     })
 
