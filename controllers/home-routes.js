@@ -105,6 +105,10 @@ router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
     });
 });
 
+router.get('/credits', (req, res) => {
+  res.render('credits');
+});
+
 // GET all responses
 router.get('/viewall', withAuth, (req, res) => {
   Responses.findAll({
@@ -116,6 +120,7 @@ router.get('/viewall', withAuth, (req, res) => {
       const responses = dbResponseData.map(response => response.get({plain: true}));
       res.render('viewEntries', {responses});
     })
+
 
 
     .catch(err => {
