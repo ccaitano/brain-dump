@@ -105,6 +105,10 @@ router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
     });
 });
 
+router.get('/credits', (req, res) => {
+  res.render('credits');
+});
+
 // GET all responses
 router.get('/viewall', withAuth, (req, res) => {
   Responses.findAll({
@@ -117,6 +121,7 @@ router.get('/viewall', withAuth, (req, res) => {
       console.log(responses);
       res.render('viewEntries', {responses});
     })
+
 
 
     .catch(err => {
