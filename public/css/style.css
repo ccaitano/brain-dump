@@ -45,3 +45,23 @@
   width: 50%;
   padding:2em
 }
+
+.card-format {
+  background-color: #EFC3E6 !important;
+  padding: 5rem;
+  font-size: larger;
+  font-family:cursive;
+  margin-bottom: 10px;
+  
+
+}
+
+
+.card-header {
+  font-family:cursive;
+  font-size: large;
+}
+
+.title{
+  font-size: xx-large;
+}
