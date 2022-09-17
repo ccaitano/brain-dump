@@ -9,7 +9,7 @@
   <textarea class="form-control" id="response" rows="3"></textarea>
 </div> --}}
 
-<div class="card m-3 text-center">
+<div class="card-format m-3 text-center" id="response-card">
         <form class="response-form m-3" id="response-form">
             <div class="form-group">
                 <label class="form-label font-weight-bold" id="question" for="question" data-question="{{question.id}}">{{question.question}}</label>
@@ -17,7 +17,7 @@
             </div>
             {{!-- <div class="row justify-content-center"> --}}
             <div class="m-3">
-                <button class="btn btn-dark" type="submit">Log your response!</button>
+                <button class="btn btn-danger fs-5" type="submit">Log your response!</button>
             </div>    
         </form>
  </div>
