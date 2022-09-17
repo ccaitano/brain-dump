@@ -13,16 +13,11 @@ const withAuth = require('../../utils/auth');
 //       const responses = dbResponseData.map(response => response.get({plain: true}));
 //       res.render('viewEntries', {responses})
 //     })
-
-  
 //   .catch(err => {
 //     console.log(err);
 //         res.status(500).json(err)
 //   });
 
-
-
-  
 // CREATE responses
 //withAuth when login route is created
 router.post('/', withAuth, (req, res) => {
@@ -40,4 +35,7 @@ router.post('/', withAuth, (req, res) => {
   }
 });
 
+router.get('/responses', (req, res) => {
+  res.render('responses');
+});
 module.exports = router;
