@@ -31,14 +31,14 @@ router.post('/login', (req, res) => {
         return;
       }
       // Need to get this to work
-      // const verifyPassword = dbUserData.checkPassword(req.body.password);
-      // if(!verifyPassword) {
-      //   console.log("wrong password");
-      //   console.log(dbUserData.password);
-      //   console.log(req.body.password);
-      //   res.status(400).json({ message: 'Wrong password'});
-      //   return;
-      // }
+      const verifyPassword = dbUserData.checkPassword(req.body.password);
+      if(!verifyPassword) {
+        console.log("Wrong password");
+        console.log(dbUserData.password);
+        console.log(req.body.password);
+        res.status(400).json({ message: 'Wrong password'});
+        return;
+      }
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.logged_in = true;

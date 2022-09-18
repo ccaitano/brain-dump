@@ -1,22 +1,6 @@
 const router = require('express').Router();
-const { Responses, Questions } = require('../../models');
+const { Responses } = require('../../models');
 const withAuth = require('../../utils/auth');
-// // GET all responses
-// router.get('/', withAuth, (req, res) => {
-//   Responses.findAll({
-//     attributes: ['id', 'response', 'question_id', 'user_id'],
-//     include: [{model: Questions, attributes: ['id', 'question', 'mood_id']}],
-//   })
-
-//   .then(dbResponseData => 
-//     {res.json(dbResponseData)
-//       const responses = dbResponseData.map(response => response.get({plain: true}));
-//       res.render('viewEntries', {responses})
-//     })
-//   .catch(err => {
-//     console.log(err);
-//         res.status(500).json(err)
-//   });
 
 // CREATE responses
 //withAuth when login route is created
