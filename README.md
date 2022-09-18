@@ -1,8 +1,8 @@
-# ***Mood-Remedy 📰 Journaling for your every mood***
+# ***Mood-Remedy 📰 Journaling for your every mood...***
 
-<!--created github.io by Cheryl>
+[GitHub Repository](https://github.com/ccaitano/mood-remedy)
 
-<!-- deployed application -->
+[Deployed Application](https://mood-remedy.herokuapp.com/)
 ## **Description** 📚
 
 *Mood-Remedy* is an application designed for people interested in journaling. Users can log in or sign up. If logging in they will be prompted to enter their email/username and password. If they haven't created an account they can input a username, email and create a password. 
@@ -23,17 +23,18 @@
 
 ## **Installation** ⚙️
 
-Visit our [repository]() to reference: any materials, our process in developing the web page, and the people involved in creating the web page.
+Visit our [repository](https://github.com/ccaitano/mood-remedy) to reference: any materials, our process in developing the web page, and the people involved in creating the web page. Visit our [deployed application](https://mood-remedy.herokuapp.com/) to experience the web page.
 <hr>
 
 ### **Usage** 💻
-* Users can select one of the emoji provided.
-* Users will be provided 4 choices, 3 of them being questions and the 4th being a none of the above entry. 
-* If they choose a question, they will be prompted to a text modal where they can respond to the question.
-* If then choose none of the above, the user will come back with 3 more questions.  
-* Once users answer the question, they can choose another emoji and start again.
-* On the main page there will be a pie chart with the users previous mood choices logged in.
-
+* Users can login in to a previous account or sign-up for a new account.
+* Once signed in, a user will see their personalized dashboard.
+* Users can select one of the emojis provided on the 'Find Your Vibe' page
+* Users will be provided with a question associated with their selected mood. 
+* If they choose to respond to the question, they will be prompted to a text modal where they can respond to the question and log their response.
+* If then choose none of the above, the user will be able to re-select their mood.  
+* Users may view their previous responses on the 'Previous Responses' page
+* On the user's main dashboard there will be a pie chart with the users previous mood distribution.
 <hr>
 
 ### **License** 💳
@@ -54,16 +55,20 @@ All testing was done by the developing team.
 <hr>
 
 ### **Technology** 💡
-*
-* 
-* 
-* 
-* 
-* 
+
+* Node.js
+* Chart.js
+* MySQL
+* Handlebars
+* Heroku
+* Excalidraw
+* GNU Image Manipulation Program
+
 <hr>
 
 ### **Contact** ☎
 * Sterling Cafrae **-** [Github](https://github.com/scarfrae)**,** [LinkedIn](https://www.linkedin.com/in/sterling-carfrae-a2a8151a5/)
-* Aliyah Musaliar **-** [Github](https://github.com/musaliyah)**,** [LinkedIn]
-https://www.linkedin.com/in/aliyah-musaliar-9582a5149/
+* Aliyah Musaliar **-** [Github](https://github.com/musaliyah)**,** [LinkedIn](https://www.linkedin.com/in/aliyah-musaliar-9582a5149/)
+* Cheryl Caitano **-** [Github](https://github.com/ccaitano)**,** [LinkedIn](https://www.linkedin.com/in/cheryl-caitano-0a8a8250/)
+* Avleen Dhillon **-** [Github](https://github.com/adhillon0817)**,** [LinkedIn](www.linkedin.com/in/avleen-dhillon-2116371b4)
 ***
