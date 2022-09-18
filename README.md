@@ -54,7 +54,7 @@ All testing was done by the developing team.
 <hr>
 
 ### **Technology** 💡
-* 
+*
 * 
 * 
 * 
