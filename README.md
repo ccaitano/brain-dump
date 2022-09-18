@@ -55,6 +55,7 @@ All testing was done by the developing team.
 <hr>
 
 ### **Technology** 💡
+
 * Node.js
 * Chart.js
 * MySQL
@@ -62,6 +63,7 @@ All testing was done by the developing team.
 * Heroku
 * Excalidraw
 * GNU Image Manipulation Program
+
 <hr>
 
 ### **Contact** ☎
