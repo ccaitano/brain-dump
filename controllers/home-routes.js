@@ -41,7 +41,6 @@ router.get('/signup', (req, res) => {
 });
 
 
-
 // GET Dashboard
 router.get('/dashboard', withAuth, (req, res) => {
   Moods.findAll({
@@ -49,6 +48,7 @@ router.get('/dashboard', withAuth, (req, res) => {
   })
     .then(moodData => {
       const moods = moodData.map((mood) => mood.get({ plain: true }));
+      console.log(moods);
       res.render('dashboard', { moods, logged_in: true });
     })
     .catch (err => {
@@ -102,6 +102,9 @@ router.get('/credits', (req, res) => {
 // GET all responses
 router.get('/viewall', withAuth, (req, res) => {
   Responses.findAll({
+    where: {
+      user_id: req.session.user_id,
+    },
     attributes: ['id', 'response', 'question_id', 'user_id'],
     include: [{model: Questions, attributes: ['id', 'question', 'mood_id']}],
   })

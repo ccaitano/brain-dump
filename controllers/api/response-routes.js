@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Responses } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
+// CREATE response
 router.post('/', withAuth, (req, res) => {
   if (req.session) {
     Responses.create({
@@ -24,4 +24,5 @@ router.post('/', withAuth, (req, res) => {
 router.get('/responses', (req, res) => {
   res.render('responses');
 });
+
 module.exports = router;
