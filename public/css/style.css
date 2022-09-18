@@ -19,12 +19,9 @@
 
 
 #logout {
-  position: relative;
-  left: 46%;
-  top: 50%;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 20px;
+  float: right;
+  padding: 10px 10px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -34,7 +31,7 @@
   border: black;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  margin: 0.2em;
+  margin: 2em; 
 }
 
 #logout:hover {background-color: #8d94b9}
@@ -81,7 +78,6 @@
   margin-left: auto;
   margin-right: auto;
   width: 30%;
-  padding:2em
 }
 
 .find-your-vibe-q{
@@ -96,10 +92,6 @@
   margin-right: auto;
   width: 40%;
 }
-/* .dashboard-images{
-  width: 150rem;
-  height: 100rem;
-} */
 
 .title{
   width: 100%;
@@ -143,6 +135,7 @@
 
 }
 
+
 h1{
   font-family: 'Handlee';
 }
@@ -172,7 +165,10 @@ h1{
     max-width: 30%;
     max-height: 30%;
   }
-
+  #logout {
+    max-width: 30%;
+    max-height: 30%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -219,6 +215,7 @@ h1{
     max-height: 60%;
   }
 
+}
 
 .saveResponse{
   padding: 10px 30px;
@@ -230,5 +227,5 @@ h1{
   border: none;
   border-radius: 15px;
   margin-left: 70%;
-
 }
+
