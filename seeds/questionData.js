@@ -39,7 +39,7 @@ const questionData = [
   {
     id: 8,
     mood_id: 5,
-    question: 'If you had all the money in the world what are three places you want to travel to?'
+    question: 'If you had all the money in the world, what are three places you want to travel to?'
   },
   {
     id: 9,
