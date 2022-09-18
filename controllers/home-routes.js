@@ -76,16 +76,6 @@ router.get('/findyourvibe', withAuth, (req, res) => {
 router.get('/findyourvibe/question/:id', withAuth, (req, res) => {
   console.log(req.params.id);
 
-  // Questions.findByPk(questionNum, {
-  //   attributes: ['id','mood_id','question'],
-  //   where: {
-  //     mood_id: req.params.id
-  //   },
-  // })
-  //   .then(dbQuestionData => {
-  //     const questions = dbQuestionData.get({ plain: true });
-  //     res.render('response', { questions, logged_in: true });
-  //   })
   Questions.findAll({
     attributes: ['id','mood_id','question'],
     where: {
@@ -118,6 +108,7 @@ router.get('/viewall', withAuth, (req, res) => {
 
     .then(dbResponseData => {
       const responses = dbResponseData.map(response => response.get({plain: true}));
+      console.log(responses);
       res.render('viewEntries', {responses});
     })
 

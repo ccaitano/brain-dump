@@ -54,9 +54,9 @@
 
 
 .btn_emoji{
-  height: 4rem;
-  width: 4rem;
-  font-size: XX-LARGE;
+  height: 6rem;
+  width: 6rem;
+  font-size:400%
   
 }
 
@@ -162,6 +162,7 @@ h1{
   width: 25%;
 }
 
+
 @media (max-width: 767px) {
   .title {
     max-width: 60%;
@@ -217,5 +218,17 @@ h1{
     max-width: 60%;
     max-height: 60%;
   }
+
+
+.saveResponse{
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: 'Handlee';
+  cursor: pointer;
+  color: black;
+  background-color: #B8BEDD;
+  border: none;
+  border-radius: 15px;
+  margin-left: 70%;
 
 }
