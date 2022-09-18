@@ -1,4 +1,3 @@
-// const sequelize = require('../config/connection');
 const { Moods } = require('../models');
 
 const moodData = [
@@ -20,7 +19,6 @@ const moodData = [
     count: 1,
     emoji_id: '🤬'
   },
-  //need to be incorperated later
   {
     id: 4,
     mood_name: 'introspective',

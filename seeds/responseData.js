@@ -1,4 +1,3 @@
-// const sequelize = require('../config/connection');
 const { Responses } = require('../models');
 
 const responseData = [
