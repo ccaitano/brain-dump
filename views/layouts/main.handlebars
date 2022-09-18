@@ -29,7 +29,9 @@
     {{{ body }}}
   </main>
   <footer>
-      
+  {{#if logged_in}}
+    <button class="logout-btn" id="logout">logout</button>
+  {{/if}}
   </footer>
 
 
@@ -37,9 +39,7 @@
   <script src="/js/logout.js"></script>
   {{/if}}
 <div class="justify-content-center">
-  {{#if logged_in}}
-           <button class="logout-btn" id="logout">logout</button>
-  {{/if}}
+
 </div>
 </body>
 
