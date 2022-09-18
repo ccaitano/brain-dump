@@ -14,14 +14,12 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
+  <header class="display-flex justify-space-between align-center ">
+    
     <nav class="navbar">
-      <div class="container-fluid justify-content-start">
+      <div class="container-fluid justify-content-center">
         <a class="navbar-brand" href="#">
-          <img src='https://i.postimg.cc/Fz1Y9BR8/Untitled-Artwork-3-1-1.png' border='0' width="25%" float="left" alt='logo-black-lines' id="logo"/>
-           {{#if logged_in}}
-           <button class="logout-btn" id="logout">logout</button>
-          {{/if}}
+          <img src='https://i.postimg.cc/Fz1Y9BR8/Untitled-Artwork-3-1-1.png' border='0' alt='logo-black-lines' id="logo"/>
     </a>
   </div>
 </nav>
@@ -38,6 +36,11 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+<div class="justify-content-center">
+  {{#if logged_in}}
+           <button class="logout-btn" id="logout">logout</button>
+  {{/if}}
+</div>
 </body>
 
 </html>
