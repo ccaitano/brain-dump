@@ -24,17 +24,38 @@
 ## **Installation** ⚙️
 
 Visit our [repository](https://github.com/ccaitano/mood-remedy) to reference: any materials, our process in developing the web page, and the people involved in creating the web page. Visit our [deployed application](https://mood-remedy.herokuapp.com/) to experience the web page.
+
+![Screenshot of Mood Remedy Home Page](./public/assets/home_screen.JPG)
+
 <hr>
 
 ### **Usage** 💻
 * Users can login in to a previous account or sign-up for a new account.
+
+    ![Screenshot of Log In Form](./public/assets/log-in_form.JPG)
+
 * Once signed in, a user will see their personalized dashboard.
+
+    ![Screenshot of Dashboard](./public/assets/dashboard_page.JPG)
+
 * Users can select one of the emojis provided on the 'Find Your Vibe' page
+
+    ![Screenshot of Find Your Vibe Page](./public/assets/findyourvibe.JPG)
+
 * Users will be provided with a question associated with their selected mood. 
 * If they choose to respond to the question, they will be prompted to a text modal where they can respond to the question and log their response.
+
+    ![Screenshot of Add Response](./public/assets/response.JPG)
+
 * If then choose none of the above, the user will be able to re-select their mood.  
 * Users may view their previous responses on the 'Previous Responses' page
+
+    ![Screenshot of View All Responses](./public/assets/view_responses.JPG)
+
 * On the user's main dashboard there will be a pie chart with the users previous mood distribution.
+
+    ![Screenshot of Mood Distribution](./public/assets/pie-chart.JPG)
+
 <hr>
 
 ### **License** 💳
