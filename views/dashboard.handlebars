@@ -37,7 +37,6 @@
         });
         const data = await response.json();
         const allMoodCount = data.moods[0].count + data.moods[1].count + data.moods[2].count + data.moods[3].count + data.moods[4].count + data.moods[5].count;
-        console.log(allMoodCount);
         const happyCount = (data.moods[0].count)/allMoodCount * 100;
         const sadCount = (data.moods[1].count)/allMoodCount * 100;
         const angryCount = (data.moods[2].count)/allMoodCount * 100;
