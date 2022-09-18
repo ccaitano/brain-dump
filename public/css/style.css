@@ -20,7 +20,7 @@
 
 #logout {
   position: relative;
-  left: 47%;
+  left: 46%;
   top: 50%;
   display: inline-block;
   padding: 10px 20px;
@@ -102,9 +102,12 @@
 } */
 
 .title{
-  display: block;
+  width: 100%;
+  height: auto;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .welcome{
@@ -157,4 +160,62 @@ h1{
 
 .heart-guy-credits{
   width: 25%;
+}
+
+@media (max-width: 767px) {
+  .title {
+    max-width: 60%;
+    max-height: 60%;
+  }
+  .welcome {
+    max-width: 30%;
+    max-height: 30%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .title {
+    max-width: 50%;
+    max-height: 50%;
+  }
+  .welcome {
+    max-width: 30%;
+    max-height: 30%;
+  }
+  #logout {
+    max-width: 30%;
+    max-height: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .title {
+    max-width: 70%;
+    max-height: 70%;
+  }
+  .welcome {
+    max-width: 50%;
+    max-height: 50%;
+  }
+  #logout {
+    max-width: 50%;
+    max-height: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .welcome {
+    max-width: 60%;
+    max-height: 60%;
+  }
+  #logout {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
 }
