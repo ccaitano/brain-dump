@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { Responses, Questions } = require('../../models');
+const { Responses } = require('../../models');
 const withAuth = require('../../utils/auth');
+
 
 router.post('/', withAuth, (req, res) => {
   if (req.session) {

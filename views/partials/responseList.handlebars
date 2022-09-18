@@ -2,7 +2,7 @@
 
 <div>
 
-   <div class="card">
+   <div class="card m-2">
   <div class="card-header" id="textbox" >
     {{ question.question }}
   </div>
@@ -10,7 +10,7 @@
     <p class="card-text" for="response">{{response}}</p>
   </div>
   {{!-- copy question --}}
-   <button onclick="copyText()">Copy</button>
+   <button class="btn btn-outline-secondary" onclick="copyText()">Copy</button>
 </div>
 </div>
 
@@ -19,6 +19,7 @@
 
 <script>
   function copyText() {
+    
     let text = "{{ question.question }}";
     navigator.clipboard.writeText(text);
 }
