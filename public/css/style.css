@@ -229,6 +229,18 @@ h1{
   background-color: #B8BEDD;
   border: none;
   border-radius: 15px;
-  margin-left: 70%;
 
+  margin-left: 40%;
+}
+
+.copy_button {
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: 'Handlee';
+  cursor: pointer;
+  color: black;
+  background-color: #B8BEDD;
+  border: none;
+  border-radius: 15px;
+  margin-left: 80%;
 }
