@@ -1,3 +1,4 @@
+// Happy Mood Counter
 const happyMoodHandler = async (event) => {
   event.preventDefault();
 
@@ -19,6 +20,7 @@ const happyMoodHandler = async (event) => {
   }
 };
 
+// Sad Mood Counter
 const sadMoodHandler = async (event) => {
   event.preventDefault();
 
@@ -40,6 +42,7 @@ const sadMoodHandler = async (event) => {
   }
 };
 
+// Angry Mood Counter
 const angryMoodHandler = async (event) => {
   event.preventDefault();
 
@@ -61,7 +64,7 @@ const angryMoodHandler = async (event) => {
   }
 };
 
-
+// Introspective Mood Counter
 const introspectiveMoodHandler = async (event) => {
   event.preventDefault();
 
@@ -83,6 +86,7 @@ const introspectiveMoodHandler = async (event) => {
   }
 };
 
+// Silly Mood Counter
 const sillyMoodHandler = async (event) => {
   event.preventDefault();
 
@@ -104,6 +108,7 @@ const sillyMoodHandler = async (event) => {
   }
 };
 
+// Random Mood Counter
 const randomMoodHandler = async (event) => {
   event.preventDefault();
 

@@ -1,15 +1,22 @@
+{{!-- Mood Remedy Title --}}
+<a href="/dashboard"><img src="https://i.postimg.cc/W1Lg7tp4/14.png" class="title" alt="title"  border="0"></a>
+<br>
 
-    <a href="/dashboard"><img src="https://i.postimg.cc/W1Lg7tp4/14.png" class="title" alt="title"  border="0"></a>
-<h1 class="find-your-vibe-q">What emoji best captures how you're feeling today?</h1>
+{{!-- Question Prompt --}}
 <div>
-
+    <h1 class="find-your-vibe-q">What emoji best captures how you're feeling today?</h1>
 </div>
 <br>
+
+{{!-- Emoji Buttons --}}
 <div class="row">
     {{#each moods as |mood|}}
         {{> moodButtons}}
     {{/each}}
 </div>
+
+{{!-- Back to Dashboard Icon --}}
+<a href="/dashboard"><img src="https://i.ibb.co/0JgMDVm/Screen-Shot-2022-09-17-at-8-54-34-AM.png" class="return" alt="heart-man asking if you would like to return back to the dashboard"  border="0"></a>
+
 <script src="/js/mood.js"></script>
 
-<a href="/dashboard"><img src="https://i.ibb.co/0JgMDVm/Screen-Shot-2022-09-17-at-8-54-34-AM.png" class="return" alt="heart-man asking if you would like to return back to the dashboard"  border="0"></a>

@@ -1,13 +1,14 @@
+{{!-- Question Prompt/Repsonse Entry --}}
 <div class="card-format m-3 text-center" id="response-card">
-        <form class="response-form m-3" id="response-form">
-            <div class="form-group">
-                <label class="form-label font-weight-bold" id="question" for="question" data-question="{{question.id}}">{{question.question}}</label>
-                <input class="form-control form-input" id="response" name="response-body"/>
-            </div>
-            <div class="m-3">
-                <button class="btn btn-danger fs-5" type="submit">Log your response!</button>
-            </div>    
-        </form>
+    <form class="response-form m-3" id="response-form">
+        <div class="form-group">
+            <label class="form-label font-weight-bold" id="question" for="question" data-question="{{question.id}}">{{question.question}}</label>
+            <input class="form-control form-input" id="response" name="response-body"/>
+        </div>
+        <div class="m-3">
+            <button class="btn btn-danger fs-5" type="submit">Log your response!</button>
+        </div>    
+    </form>
  </div>
 
 <script src="/js/response.js"></script>

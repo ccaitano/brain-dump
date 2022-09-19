@@ -15,32 +15,26 @@
 
 <body>
   <header class="display-flex justify-space-between align-center ">
-    
     <nav class="navbar">
       <div class="container-fluid justify-content-center">
         <a class="navbar-brand" href="#">
           <img src='https://i.postimg.cc/Fz1Y9BR8/Untitled-Artwork-3-1-1.png' border='0' alt='logo-black-lines' id="logo"/>
-    </a>
-  </div>
-</nav>
-   
+        </a>
+      </div>
+    </nav>
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
   </main>
   <footer>
-  {{#if logged_in}}
-    <button class="logout-btn" id="logout">logout</button>
-  {{/if}}
+    {{#if logged_in}}
+      <button class="logout-btn" id="logout">logout</button>
+    {{/if}}
   </footer>
 
-
-  {{#if logged_in}}
+{{#if logged_in}}
   <script src="/js/logout.js"></script>
-  {{/if}}
-<div class="justify-content-center">
-
-</div>
+{{/if}}
 </body>
 
 </html>

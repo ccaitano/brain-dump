@@ -1,28 +1,21 @@
-
-
+{{!-- List Each Response --}}
 <div>
-
-   <div class="card m-2">
-  <div class="card-header" id="textbox" >
-    {{ question.question }}
+  <div class="card m-2">
+    <div class="card-header" id="textbox" >
+      {{ question.question }}
+    </div>
+    <div class="card-format">
+      <p class="card-text" for="response">{{response}}</p>
+    </div>
+    {{!-- Copy Question --}}
+    <button class="copy_button" onclick="copyText()">Copy</button>
   </div>
-  <div class="card-format">
-    <p class="card-text" for="response">{{response}}</p>
-  </div>
-  {{!-- copy question --}}
-
-<button class="copy_button" onclick="copyText()">Copy</button>
-
-</div>
 </div>
 
-
-
-
+{{!-- Copy Question Script --}}
 <script>
   function copyText() {
-    
     let text = "{{ question.question }}";
     navigator.clipboard.writeText(text);
-}
+  }
 </script>

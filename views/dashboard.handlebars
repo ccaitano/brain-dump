@@ -1,25 +1,24 @@
-
-
-
+{{!-- Welcome Title --}}
 <div class="container-flex">
     <h1>
         <a href="/dashboard"><img src="https://i.postimg.cc/W1Lg7tp4/14.png" class="title" alt="title"  border="0"></a>
-
         <a href="/"><img src="https://i.postimg.cc/q7gCQ0Tq/Screen-Shot-2022-09-17-at-7-42-03-AM.png" alt="welcome" class="welcome" border="0"></a>
     </h1>
 </div>
-    <a href="/dashboard"><img src="https://i.ibb.co/6rMJLkf/intro.png" alt="intro" class="icon" id="intro"></a>
-{{!-- icons --}}
-<div class="dashboard-images">
-    
-<a href="/dashboard"><img src="https://i.ibb.co/LxdwbBb/shareqs.png" alt="shareqs" class="icon" id="shareqs" border="0"></a>
-<a href="/credits"><img src="https://i.ibb.co/tYbx46K/credits.png" alt="credits" class="icon" id="log" border="0"></a>
-<a href="/dashboard"><img src="https://i.ibb.co/HCWV0py/settings.png" alt="settings" class="icon" id="settings" border="0"></a>
-<a href="/viewall"><img src="https://i.ibb.co/hWKfcP5/previous.png" alt="previous" class="icon" id="previous" border="0"></a>
-<a href="/findyourvibe"><img src="https://i.ibb.co/ZXTyGX7/findvibe.png" alt="findvibe" class="icon" id="findvibe" border="0"></a><br />
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{{!-- Welcome Friends Icon --}}
+<a href="/dashboard"><img src="https://i.ibb.co/6rMJLkf/intro.png" alt="intro" class="icon" id="intro"></a>
+
+{{!-- Menu Icons --}}
+<div class="dashboard-images">    
+    <a href="/dashboard"><img src="https://i.ibb.co/LxdwbBb/shareqs.png" alt="shareqs" class="icon" id="shareqs" border="0"></a>
+    <a href="/credits"><img src="https://i.ibb.co/tYbx46K/credits.png" alt="credits" class="icon" id="log" border="0"></a>
+    <a href="/dashboard"><img src="https://i.ibb.co/HCWV0py/settings.png" alt="settings" class="icon" id="settings" border="0"></a>
+    <a href="/viewall"><img src="https://i.ibb.co/hWKfcP5/previous.png" alt="previous" class="icon" id="previous" border="0"></a>
+    <a href="/findyourvibe"><img src="https://i.ibb.co/ZXTyGX7/findvibe.png" alt="findvibe" class="icon" id="findvibe" border="0"></a>
+    <br/>
 </div>
 
+{{!-- Mood Distribution Chart --}}
 <div class="row justify-content-center">
     <div class="w-50">
         <h3 class="text-center">My Mood Distribution</h3>
@@ -27,9 +26,9 @@
     </div>
 </div>
 
+{{!-- Mood Distribution Script with Chart.js --}}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  
-
     const getChart = async () => {
         const response = await fetch('/api/moods', {
             method: 'GET',
@@ -43,41 +42,33 @@
         const introspectiveCount = (data.moods[3].count)/allMoodCount * 100;
         const sillyCount = (data.moods[4].count)/allMoodCount * 100;
         const randomCount = (data.moods[5].count)/allMoodCount * 100;
-    const ctx = document.getElementById('myChart');
-    const myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: [
-            'Happy',
-            'Sad',
-            'Angry',
-            'Introspective',
-            'Silly',
-            'Random'
-            ],
-            datasets: [{
-            label: 'My Moods',
-            data: [happyCount, sadCount, angryCount, introspectiveCount, sillyCount, randomCount],
-            backgroundColor: [
-                '#B8BEDD',
-                '#EFC3E6',
-                '#F0E6EF',
-                '#B8BEDD',
-                '#EFC3E6',
-                '#F0E6EF'
-            ],
-            hoverOffset: 4
-            }]
-        },
-    });
-
+        const ctx = document.getElementById('myChart');
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                'Happy',
+                'Sad',
+                'Angry',
+                'Introspective',
+                'Silly',
+                'Random'
+                ],
+                datasets: [{
+                    label: 'My Moods',
+                    data: [happyCount, sadCount, angryCount, introspectiveCount, sillyCount, randomCount],
+                    backgroundColor: [
+                        '#B8BEDD',
+                        '#EFC3E6',
+                        '#F0E6EF',
+                        '#B8BEDD',
+                        '#EFC3E6',
+                        '#F0E6EF'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+        });
     }
-
-    getChart();
-    
+    getChart(); 
 </script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
